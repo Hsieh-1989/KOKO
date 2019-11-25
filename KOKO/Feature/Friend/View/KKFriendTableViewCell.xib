@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="kq8-d5-Vdm" customClass="KKFriendTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kq8-d5-Vdm" id="FU2-9g-uyc">
+                <rect key="frame" x="0.0" y="0.0" width="423" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qae-I0-6bu">
+                        <rect key="frame" x="95" y="20" width="203" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8DM-VQ-Yt1">
+                        <rect key="frame" x="20" y="23" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="Aq2-yf-CB2"/>
+                            <constraint firstAttribute="width" constant="14" id="aW0-SI-Kq0"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MDq-vl-soi">
+                        <rect key="frame" x="40" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Txr-Lk-ZLu"/>
+                            <constraint firstAttribute="height" constant="40" id="kTc-Te-TYD"/>
+                        </constraints>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5R-oH-vVq">
+                        <rect key="frame" x="313" y="18" width="90" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="EVC-3J-7CF"/>
+                            <constraint firstAttribute="height" constant="24" id="Rpj-iS-LHj"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="VZd-YC-xHY">
+                        <rect key="frame" x="313" y="18" width="90" height="24"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAn-9m-f1g">
+                                <rect key="frame" x="0.0" y="0.0" width="47" height="24"/>
+                                <state key="normal" title="轉帳"/>
+                                <connections>
+                                    <action selector="transferButtonDidTap:" destination="kq8-d5-Vdm" eventType="touchUpInside" id="sOi-7t-SRO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-KZ-nCX">
+                                <rect key="frame" x="72" y="0.0" width="18" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="do5-zR-qai"/>
+                                </constraints>
+                                <state key="normal" image="icFriendsMore"/>
+                                <connections>
+                                    <action selector="moreInfoButtonDidTap:" destination="kq8-d5-Vdm" eventType="touchUpInside" id="XLI-Re-siw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw6-Gv-WXg">
+                        <rect key="frame" x="95" y="59" width="308" height="1"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="qQG-Tt-Kmr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8DM-VQ-Yt1" firstAttribute="centerY" secondItem="FU2-9g-uyc" secondAttribute="centerY" id="0FV-TS-7B9"/>
+                    <constraint firstItem="VZd-YC-xHY" firstAttribute="trailing" secondItem="b5R-oH-vVq" secondAttribute="trailing" id="6uy-KR-eNF"/>
+                    <constraint firstAttribute="bottom" secondItem="Xw6-Gv-WXg" secondAttribute="bottom" id="7Dl-hU-LZI"/>
+                    <constraint firstItem="MDq-vl-soi" firstAttribute="top" secondItem="FU2-9g-uyc" secondAttribute="top" constant="10" id="7xt-ax-soG"/>
+                    <constraint firstItem="VZd-YC-xHY" firstAttribute="bottom" secondItem="b5R-oH-vVq" secondAttribute="bottom" id="CT1-5m-pFW"/>
+                    <constraint firstItem="b5R-oH-vVq" firstAttribute="trailing" secondItem="FU2-9g-uyc" secondAttribute="trailingMargin" id="CvI-vg-rXf"/>
+                    <constraint firstItem="Xw6-Gv-WXg" firstAttribute="top" secondItem="MDq-vl-soi" secondAttribute="bottom" priority="999" constant="10" id="Drj-O0-GR3"/>
+                    <constraint firstItem="b5R-oH-vVq" firstAttribute="centerY" secondItem="FU2-9g-uyc" secondAttribute="centerY" id="GJi-8V-D6K"/>
+                    <constraint firstItem="qae-I0-6bu" firstAttribute="centerY" secondItem="FU2-9g-uyc" secondAttribute="centerY" id="XM7-sF-Ntf"/>
+                    <constraint firstItem="b5R-oH-vVq" firstAttribute="leading" secondItem="qae-I0-6bu" secondAttribute="trailing" constant="15" id="ZRN-UR-PAT"/>
+                    <constraint firstItem="VZd-YC-xHY" firstAttribute="top" secondItem="b5R-oH-vVq" secondAttribute="top" id="ZiB-nk-Ksb"/>
+                    <constraint firstItem="VZd-YC-xHY" firstAttribute="leading" secondItem="b5R-oH-vVq" secondAttribute="leading" id="ZwN-hV-Vsa"/>
+                    <constraint firstItem="qae-I0-6bu" firstAttribute="leading" secondItem="MDq-vl-soi" secondAttribute="trailing" constant="15" id="bnT-oo-6n5"/>
+                    <constraint firstItem="MDq-vl-soi" firstAttribute="leading" secondItem="8DM-VQ-Yt1" secondAttribute="trailing" constant="6" id="diU-oh-Oi8"/>
+                    <constraint firstItem="8DM-VQ-Yt1" firstAttribute="leading" secondItem="FU2-9g-uyc" secondAttribute="leadingMargin" id="jy1-cZ-oJW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Xw6-Gv-WXg" secondAttribute="trailing" id="lB1-KL-33z"/>
+                    <constraint firstItem="Xw6-Gv-WXg" firstAttribute="leading" secondItem="qae-I0-6bu" secondAttribute="leading" id="lsA-wd-7IZ"/>
+                    <constraint firstItem="MDq-vl-soi" firstAttribute="centerY" secondItem="FU2-9g-uyc" secondAttribute="centerY" id="v95-nB-kJN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="MDq-vl-soi" id="t57-MM-xEy"/>
+                <outlet property="invitedButton" destination="b5R-oH-vVq" id="ZhZ-m1-QJK"/>
+                <outlet property="moreButton" destination="ufb-KZ-nCX" id="vxB-Yo-PSu"/>
+                <outlet property="moreInfoStackView" destination="VZd-YC-xHY" id="wr6-ca-AuU"/>
+                <outlet property="nameLabel" destination="qae-I0-6bu" id="XXI-ct-5a5"/>
+                <outlet property="separator" destination="Xw6-Gv-WXg" id="oWr-HR-fOZ"/>
+                <outlet property="starImageView" destination="8DM-VQ-Yt1" id="49i-CY-ENq"/>
+                <outlet property="transferButton" destination="vAn-9m-f1g" id="gGD-OO-jMs"/>
+            </connections>
+            <point key="canvasLocation" x="-160.1449275362319" y="-186.16071428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icFriendsMore" width="18" height="4"/>
+    </resources>
+</document>

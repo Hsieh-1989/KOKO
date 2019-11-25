@@ -1,0 +1,865 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1743C1F423882470000167C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C1F323882470000167C0 /* AppDelegate.m */; };
+		1743C1F723882470000167C0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C1F623882470000167C0 /* SceneDelegate.m */; };
+		1743C1FD23882470000167C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1743C1FB23882470000167C0 /* Main.storyboard */; };
+		1743C1FF23882472000167C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1743C1FE23882472000167C0 /* Assets.xcassets */; };
+		1743C20223882472000167C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1743C20023882472000167C0 /* LaunchScreen.storyboard */; };
+		1743C20523882472000167C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C20423882472000167C0 /* main.m */; };
+		1743C2272388DED6000167C0 /* NSURLSession+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C2262388DED6000167C0 /* NSURLSession+JSON.m */; };
+		1743C2312388F243000167C0 /* KKAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C2302388F243000167C0 /* KKAPIRequest.m */; };
+		1743C2352388F92D000167C0 /* KKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C2342388F92D000167C0 /* KKUser.m */; };
+		1743C2382388FE0F000167C0 /* KKFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C2372388FE0F000167C0 /* KKFriend.m */; };
+		1743C23B2388FFC5000167C0 /* KKAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C23A2388FFC5000167C0 /* KKAPIClient.m */; };
+		1743C23E23890385000167C0 /* KKAPIRequest+KKAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C23D23890385000167C0 /* KKAPIRequest+KKAPI.m */; };
+		1743C248238932A3000167C0 /* APITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C247238932A3000167C0 /* APITest.m */; };
+		1743C24F23893313000167C0 /* friend4.json in Resources */ = {isa = PBXBuildFile; fileRef = 1743C24A23893313000167C0 /* friend4.json */; };
+		1743C25023893313000167C0 /* man.json in Resources */ = {isa = PBXBuildFile; fileRef = 1743C24B23893313000167C0 /* man.json */; };
+		1743C25123893313000167C0 /* friend2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1743C24C23893313000167C0 /* friend2.json */; };
+		1743C25223893313000167C0 /* friend3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1743C24D23893313000167C0 /* friend3.json */; };
+		1743C25323893313000167C0 /* friend1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1743C24E23893313000167C0 /* friend1.json */; };
+		1743C257238937B1000167C0 /* KKStubURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C256238937B1000167C0 /* KKStubURLProtocol.m */; };
+		1743C25C23894CE0000167C0 /* friend1+2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1743C25B23894CE0000167C0 /* friend1+2.json */; };
+		1743C26323894DA5000167C0 /* NSDateFormatter+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C26223894DA5000167C0 /* NSDateFormatter+utils.m */; };
+		1743C26B238976DE000167C0 /* UIColor+KK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743C26A238976DE000167C0 /* UIColor+KK.m */; };
+		1755FC4D2389917F0060A055 /* KKFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC4A2389917F0060A055 /* KKFriendTableViewCell.m */; };
+		1755FC4E2389917F0060A055 /* KKFriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1755FC4C2389917F0060A055 /* KKFriendTableViewCell.xib */; };
+		1755FC54238991BA0060A055 /* UIImage+KK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC50238991BA0060A055 /* UIImage+KK.m */; };
+		1755FC55238991BA0060A055 /* UIFont+KK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC52238991BA0060A055 /* UIFont+KK.m */; };
+		1755FC59238991C00060A055 /* UIButton+KK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC57238991C00060A055 /* UIButton+KK.m */; };
+		1755FC5C238991D30060A055 /* UIImage+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC5A238991D30060A055 /* UIImage+utils.m */; };
+		1755FC6823899BCF0060A055 /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC6723899BCF0060A055 /* TableViewDataSource.m */; };
+		1755FC6A238A1D3D0060A055 /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1755FC69238A1D3D0060A055 /* Friend.storyboard */; };
+		1755FC6D238A271E0060A055 /* KKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC6C238A271E0060A055 /* KKTabBarController.m */; };
+		1755FC70238A2FEF0060A055 /* KKFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC6F238A2FEF0060A055 /* KKFriendViewController.m */; };
+		1755FC73238A302D0060A055 /* KKFriendEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC72238A302D0060A055 /* KKFriendEmptyViewController.m */; };
+		1755FC79238A36A40060A055 /* UIViewController+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC78238A36A40060A055 /* UIViewController+utils.m */; };
+		1755FC7C238A378A0060A055 /* KKFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC7B238A378A0060A055 /* KKFriendListViewController.m */; };
+		1755FC80238A38FC0060A055 /* UIViewController+KK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC7F238A38FC0060A055 /* UIViewController+KK.m */; };
+		1755FC8D238A49670060A055 /* NSMutableAttributedString+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC8C238A49660060A055 /* NSMutableAttributedString+utils.m */; };
+		1755FC90238A56450060A055 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC8F238A56450060A055 /* GradientButton.m */; };
+		1755FC93238A63180060A055 /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC92238A63180060A055 /* KKNavigationController.m */; };
+		1755FC96238A690E0060A055 /* KKUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC95238A690E0060A055 /* KKUserHeaderView.m */; };
+		1755FC98238A69360060A055 /* KKUserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1755FC97238A69360060A055 /* KKUserHeaderView.xib */; };
+		1755FC9C238A72B00060A055 /* KKUserHeaderView+Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC9B238A72B00060A055 /* KKUserHeaderView+Configure.m */; };
+		1755FC9F238A7A6D0060A055 /* KKFriendListSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FC9E238A7A6D0060A055 /* KKFriendListSectionHeaderView.m */; };
+		1755FCA1238A7ACC0060A055 /* KKFriendListSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1755FCA0238A7ACC0060A055 /* KKFriendListSectionHeaderView.xib */; };
+		1755FCA4238A81760060A055 /* KKFriendTableViewCell+Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCA3238A81760060A055 /* KKFriendTableViewCell+Configure.m */; };
+		1755FCA7238A9C420060A055 /* SectionedTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCA6238A9C420060A055 /* SectionedTableViewDataSource.m */; };
+		1755FCAA238AA00C0060A055 /* KKFriendListContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCA9238AA00C0060A055 /* KKFriendListContainerController.m */; };
+		1755FCAD238AAC9C0060A055 /* Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCAC238AAC9C0060A055 /* Environment.m */; };
+		1755FCB1238AB9E10060A055 /* KKFriendListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCB0238AB9E10060A055 /* KKFriendListViewModel.m */; };
+		1755FCB5238AD4640060A055 /* KKFriendInvitingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCB3238AD4640060A055 /* KKFriendInvitingCell.m */; };
+		1755FCB6238AD4640060A055 /* KKFriendInvitingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1755FCB4238AD4640060A055 /* KKFriendInvitingCell.xib */; };
+		1755FCB9238ADA0F0060A055 /* KKFriendInvitingCell+Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCB8238ADA0F0060A055 /* KKFriendInvitingCell+Configure.m */; };
+		1755FCBC238BEC610060A055 /* EnvironmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCBB238BEC610060A055 /* EnvironmentViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1743C20B23882472000167C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1743C1E723882470000167C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1743C1EE23882470000167C0;
+			remoteInfo = KOKO;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1743C1EF23882470000167C0 /* KOKO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOKO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1743C1F223882470000167C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1743C1F323882470000167C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1743C1F523882470000167C0 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		1743C1F623882470000167C0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		1743C1FC23882470000167C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1743C1FE23882472000167C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1743C20123882472000167C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1743C20323882472000167C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1743C20423882472000167C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1743C20A23882472000167C0 /* KOKOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOKOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1743C21023882472000167C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1743C2252388DED6000167C0 /* NSURLSession+JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+JSON.h"; sourceTree = "<group>"; };
+		1743C2262388DED6000167C0 /* NSURLSession+JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+JSON.m"; sourceTree = "<group>"; };
+		1743C22F2388F243000167C0 /* KKAPIRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAPIRequest.h; sourceTree = "<group>"; };
+		1743C2302388F243000167C0 /* KKAPIRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAPIRequest.m; sourceTree = "<group>"; };
+		1743C2332388F92D000167C0 /* KKUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKUser.h; sourceTree = "<group>"; };
+		1743C2342388F92D000167C0 /* KKUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKUser.m; sourceTree = "<group>"; };
+		1743C2362388FE0F000167C0 /* KKFriend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFriend.h; sourceTree = "<group>"; };
+		1743C2372388FE0F000167C0 /* KKFriend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFriend.m; sourceTree = "<group>"; };
+		1743C2392388FFC5000167C0 /* KKAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAPIClient.h; sourceTree = "<group>"; };
+		1743C23A2388FFC5000167C0 /* KKAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAPIClient.m; sourceTree = "<group>"; };
+		1743C23C23890385000167C0 /* KKAPIRequest+KKAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKAPIRequest+KKAPI.h"; sourceTree = "<group>"; };
+		1743C23D23890385000167C0 /* KKAPIRequest+KKAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "KKAPIRequest+KKAPI.m"; sourceTree = "<group>"; };
+		1743C247238932A3000167C0 /* APITest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APITest.m; sourceTree = "<group>"; };
+		1743C24A23893313000167C0 /* friend4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friend4.json; sourceTree = "<group>"; };
+		1743C24B23893313000167C0 /* man.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = man.json; sourceTree = "<group>"; };
+		1743C24C23893313000167C0 /* friend2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friend2.json; sourceTree = "<group>"; };
+		1743C24D23893313000167C0 /* friend3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friend3.json; sourceTree = "<group>"; };
+		1743C24E23893313000167C0 /* friend1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friend1.json; sourceTree = "<group>"; };
+		1743C255238937B1000167C0 /* KKStubURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKStubURLProtocol.h; sourceTree = "<group>"; };
+		1743C256238937B1000167C0 /* KKStubURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKStubURLProtocol.m; sourceTree = "<group>"; };
+		1743C25B23894CE0000167C0 /* friend1+2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "friend1+2.json"; sourceTree = "<group>"; };
+		1743C26123894DA5000167C0 /* NSDateFormatter+utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+utils.h"; sourceTree = "<group>"; };
+		1743C26223894DA5000167C0 /* NSDateFormatter+utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+utils.m"; sourceTree = "<group>"; };
+		1743C269238976DE000167C0 /* UIColor+KK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+KK.h"; sourceTree = "<group>"; };
+		1743C26A238976DE000167C0 /* UIColor+KK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KK.m"; sourceTree = "<group>"; };
+		1755FC4A2389917F0060A055 /* KKFriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKFriendTableViewCell.m; sourceTree = "<group>"; };
+		1755FC4B2389917F0060A055 /* KKFriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKFriendTableViewCell.h; sourceTree = "<group>"; };
+		1755FC4C2389917F0060A055 /* KKFriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KKFriendTableViewCell.xib; sourceTree = "<group>"; };
+		1755FC50238991BA0060A055 /* UIImage+KK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KK.m"; sourceTree = "<group>"; };
+		1755FC51238991BA0060A055 /* UIImage+KK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KK.h"; sourceTree = "<group>"; };
+		1755FC52238991BA0060A055 /* UIFont+KK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+KK.m"; sourceTree = "<group>"; };
+		1755FC53238991BA0060A055 /* UIFont+KK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+KK.h"; sourceTree = "<group>"; };
+		1755FC57238991C00060A055 /* UIButton+KK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KK.m"; sourceTree = "<group>"; };
+		1755FC58238991C00060A055 /* UIButton+KK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+KK.h"; sourceTree = "<group>"; };
+		1755FC5A238991D30060A055 /* UIImage+utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+utils.m"; sourceTree = "<group>"; };
+		1755FC5B238991D30060A055 /* UIImage+utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+utils.h"; sourceTree = "<group>"; };
+		1755FC6623899BCF0060A055 /* TableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
+		1755FC6723899BCF0060A055 /* TableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSource.m; sourceTree = "<group>"; };
+		1755FC69238A1D3D0060A055 /* Friend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friend.storyboard; sourceTree = "<group>"; };
+		1755FC6B238A271E0060A055 /* KKTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKTabBarController.h; sourceTree = "<group>"; };
+		1755FC6C238A271E0060A055 /* KKTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKTabBarController.m; sourceTree = "<group>"; };
+		1755FC6E238A2FEF0060A055 /* KKFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFriendViewController.h; sourceTree = "<group>"; };
+		1755FC6F238A2FEF0060A055 /* KKFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFriendViewController.m; sourceTree = "<group>"; };
+		1755FC71238A302D0060A055 /* KKFriendEmptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFriendEmptyViewController.h; sourceTree = "<group>"; };
+		1755FC72238A302D0060A055 /* KKFriendEmptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFriendEmptyViewController.m; sourceTree = "<group>"; };
+		1755FC77238A36A40060A055 /* UIViewController+utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+utils.h"; sourceTree = "<group>"; };
+		1755FC78238A36A40060A055 /* UIViewController+utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+utils.m"; sourceTree = "<group>"; };
+		1755FC7A238A378A0060A055 /* KKFriendListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFriendListViewController.h; sourceTree = "<group>"; };
+		1755FC7B238A378A0060A055 /* KKFriendListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFriendListViewController.m; sourceTree = "<group>"; };
+		1755FC7E238A38FC0060A055 /* UIViewController+KK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KK.h"; sourceTree = "<group>"; };
+		1755FC7F238A38FC0060A055 /* UIViewController+KK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KK.m"; sourceTree = "<group>"; };
+		1755FC8B238A49660060A055 /* NSMutableAttributedString+utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+utils.h"; sourceTree = "<group>"; };
+		1755FC8C238A49660060A055 /* NSMutableAttributedString+utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+utils.m"; sourceTree = "<group>"; };
+		1755FC8E238A56450060A055 /* GradientButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
+		1755FC8F238A56450060A055 /* GradientButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
+		1755FC91238A63180060A055 /* KKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationController.h; sourceTree = "<group>"; };
+		1755FC92238A63180060A055 /* KKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
+		1755FC94238A690E0060A055 /* KKUserHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKUserHeaderView.h; sourceTree = "<group>"; };
+		1755FC95238A690E0060A055 /* KKUserHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKUserHeaderView.m; sourceTree = "<group>"; };
+		1755FC97238A69360060A055 /* KKUserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKUserHeaderView.xib; sourceTree = "<group>"; };
+		1755FC9A238A72B00060A055 /* KKUserHeaderView+Configure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKUserHeaderView+Configure.h"; sourceTree = "<group>"; };
+		1755FC9B238A72B00060A055 /* KKUserHeaderView+Configure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "KKUserHeaderView+Configure.m"; sourceTree = "<group>"; };
+		1755FC9D238A7A6D0060A055 /* KKFriendListSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFriendListSectionHeaderView.h; sourceTree = "<group>"; };
+		1755FC9E238A7A6D0060A055 /* KKFriendListSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFriendListSectionHeaderView.m; sourceTree = "<group>"; };
+		1755FCA0238A7ACC0060A055 /* KKFriendListSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFriendListSectionHeaderView.xib; sourceTree = "<group>"; };
+		1755FCA2238A81760060A055 /* KKFriendTableViewCell+Configure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKFriendTableViewCell+Configure.h"; sourceTree = "<group>"; };
+		1755FCA3238A81760060A055 /* KKFriendTableViewCell+Configure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "KKFriendTableViewCell+Configure.m"; sourceTree = "<group>"; };
+		1755FCA5238A9C420060A055 /* SectionedTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectionedTableViewDataSource.h; sourceTree = "<group>"; };
+		1755FCA6238A9C420060A055 /* SectionedTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionedTableViewDataSource.m; sourceTree = "<group>"; };
+		1755FCA8238AA00C0060A055 /* KKFriendListContainerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFriendListContainerController.h; sourceTree = "<group>"; };
+		1755FCA9238AA00C0060A055 /* KKFriendListContainerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFriendListContainerController.m; sourceTree = "<group>"; };
+		1755FCAB238AAC9C0060A055 /* Environment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Environment.h; sourceTree = "<group>"; };
+		1755FCAC238AAC9C0060A055 /* Environment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Environment.m; sourceTree = "<group>"; };
+		1755FCAF238AB9E10060A055 /* KKFriendListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFriendListViewModel.h; sourceTree = "<group>"; };
+		1755FCB0238AB9E10060A055 /* KKFriendListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFriendListViewModel.m; sourceTree = "<group>"; };
+		1755FCB2238AD4640060A055 /* KKFriendInvitingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KKFriendInvitingCell.h; path = KOKO/Feature/Friend/View/KKFriendInvitingCell.h; sourceTree = SOURCE_ROOT; };
+		1755FCB3238AD4640060A055 /* KKFriendInvitingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KKFriendInvitingCell.m; path = KOKO/Feature/Friend/View/KKFriendInvitingCell.m; sourceTree = SOURCE_ROOT; };
+		1755FCB4238AD4640060A055 /* KKFriendInvitingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = KKFriendInvitingCell.xib; path = KOKO/Feature/Friend/View/KKFriendInvitingCell.xib; sourceTree = SOURCE_ROOT; };
+		1755FCB7238ADA0F0060A055 /* KKFriendInvitingCell+Configure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKFriendInvitingCell+Configure.h"; sourceTree = "<group>"; };
+		1755FCB8238ADA0F0060A055 /* KKFriendInvitingCell+Configure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "KKFriendInvitingCell+Configure.m"; sourceTree = "<group>"; };
+		1755FCBA238BEC610060A055 /* EnvironmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnvironmentViewController.h; sourceTree = "<group>"; };
+		1755FCBB238BEC610060A055 /* EnvironmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnvironmentViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1743C1EC23882470000167C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1743C20723882472000167C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1743C1E623882470000167C0 = {
+			isa = PBXGroup;
+			children = (
+				1743C1F123882470000167C0 /* KOKO */,
+				1743C20D23882472000167C0 /* KOKOTests */,
+				1743C1F023882470000167C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1743C1F023882470000167C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1743C1EF23882470000167C0 /* KOKO.app */,
+				1743C20A23882472000167C0 /* KOKOTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1743C1F123882470000167C0 /* KOKO */ = {
+			isa = PBXGroup;
+			children = (
+				1743C265238957FD000167C0 /* App */,
+				1743C2322388F91C000167C0 /* Model */,
+				1743C264238957EB000167C0 /* Feature */,
+				1743C2282388E890000167C0 /* APIClient */,
+				1755FC6423899BAA0060A055 /* Utils */,
+				1743C268238976A4000167C0 /* Style */,
+				1743C1FE23882472000167C0 /* Assets.xcassets */,
+				1743C20323882472000167C0 /* Info.plist */,
+				1743C20423882472000167C0 /* main.m */,
+			);
+			path = KOKO;
+			sourceTree = "<group>";
+		};
+		1743C20D23882472000167C0 /* KOKOTests */ = {
+			isa = PBXGroup;
+			children = (
+				1743C258238937B8000167C0 /* Helper */,
+				1743C249238932AA000167C0 /* TestData */,
+				1743C247238932A3000167C0 /* APITest.m */,
+				1743C21023882472000167C0 /* Info.plist */,
+			);
+			path = KOKOTests;
+			sourceTree = "<group>";
+		};
+		1743C2282388E890000167C0 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				1743C2542389333F000167C0 /* Endpoint */,
+				1743C2252388DED6000167C0 /* NSURLSession+JSON.h */,
+				1743C2262388DED6000167C0 /* NSURLSession+JSON.m */,
+				1743C2392388FFC5000167C0 /* KKAPIClient.h */,
+				1743C23A2388FFC5000167C0 /* KKAPIClient.m */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		1743C2322388F91C000167C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1743C2332388F92D000167C0 /* KKUser.h */,
+				1743C2342388F92D000167C0 /* KKUser.m */,
+				1743C2362388FE0F000167C0 /* KKFriend.h */,
+				1743C2372388FE0F000167C0 /* KKFriend.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1743C249238932AA000167C0 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				1743C24E23893313000167C0 /* friend1.json */,
+				1743C24C23893313000167C0 /* friend2.json */,
+				1743C24D23893313000167C0 /* friend3.json */,
+				1743C24A23893313000167C0 /* friend4.json */,
+				1743C24B23893313000167C0 /* man.json */,
+				1743C25B23894CE0000167C0 /* friend1+2.json */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		1743C2542389333F000167C0 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				1743C22F2388F243000167C0 /* KKAPIRequest.h */,
+				1743C2302388F243000167C0 /* KKAPIRequest.m */,
+				1743C23C23890385000167C0 /* KKAPIRequest+KKAPI.h */,
+				1743C23D23890385000167C0 /* KKAPIRequest+KKAPI.m */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		1743C258238937B8000167C0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1743C255238937B1000167C0 /* KKStubURLProtocol.h */,
+				1743C256238937B1000167C0 /* KKStubURLProtocol.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1743C264238957EB000167C0 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				1755FC7D238A38DC0060A055 /* Storyboard */,
+				1755FC4F238991950060A055 /* Main */,
+				1755FC482389917F0060A055 /* Friend */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		1743C265238957FD000167C0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1743C1F223882470000167C0 /* AppDelegate.h */,
+				1743C1F323882470000167C0 /* AppDelegate.m */,
+				1743C1F523882470000167C0 /* SceneDelegate.h */,
+				1743C1F623882470000167C0 /* SceneDelegate.m */,
+				1755FCAB238AAC9C0060A055 /* Environment.h */,
+				1755FCAC238AAC9C0060A055 /* Environment.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1743C26623895840000167C0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1743C26123894DA5000167C0 /* NSDateFormatter+utils.h */,
+				1743C26223894DA5000167C0 /* NSDateFormatter+utils.m */,
+				1755FC5B238991D30060A055 /* UIImage+utils.h */,
+				1755FC5A238991D30060A055 /* UIImage+utils.m */,
+				1755FC77238A36A40060A055 /* UIViewController+utils.h */,
+				1755FC78238A36A40060A055 /* UIViewController+utils.m */,
+				1755FC8B238A49660060A055 /* NSMutableAttributedString+utils.h */,
+				1755FC8C238A49660060A055 /* NSMutableAttributedString+utils.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1743C268238976A4000167C0 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				1755FC56238991C00060A055 /* UIComponent */,
+				1743C269238976DE000167C0 /* UIColor+KK.h */,
+				1743C26A238976DE000167C0 /* UIColor+KK.m */,
+				1755FC53238991BA0060A055 /* UIFont+KK.h */,
+				1755FC52238991BA0060A055 /* UIFont+KK.m */,
+				1755FC51238991BA0060A055 /* UIImage+KK.h */,
+				1755FC50238991BA0060A055 /* UIImage+KK.m */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		1755FC482389917F0060A055 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				1755FCAE238AB9CD0060A055 /* ViewModel */,
+				1755FC99238A6EDC0060A055 /* View+configure */,
+				1755FC492389917F0060A055 /* View */,
+				1755FC6E238A2FEF0060A055 /* KKFriendViewController.h */,
+				1755FC6F238A2FEF0060A055 /* KKFriendViewController.m */,
+				1755FCA8238AA00C0060A055 /* KKFriendListContainerController.h */,
+				1755FCA9238AA00C0060A055 /* KKFriendListContainerController.m */,
+				1755FC71238A302D0060A055 /* KKFriendEmptyViewController.h */,
+				1755FC72238A302D0060A055 /* KKFriendEmptyViewController.m */,
+				1755FC7A238A378A0060A055 /* KKFriendListViewController.h */,
+				1755FC7B238A378A0060A055 /* KKFriendListViewController.m */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		1755FC492389917F0060A055 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1755FCB2238AD4640060A055 /* KKFriendInvitingCell.h */,
+				1755FCB3238AD4640060A055 /* KKFriendInvitingCell.m */,
+				1755FCB4238AD4640060A055 /* KKFriendInvitingCell.xib */,
+				1755FC4B2389917F0060A055 /* KKFriendTableViewCell.h */,
+				1755FC4A2389917F0060A055 /* KKFriendTableViewCell.m */,
+				1755FC4C2389917F0060A055 /* KKFriendTableViewCell.xib */,
+				1755FC94238A690E0060A055 /* KKUserHeaderView.h */,
+				1755FC95238A690E0060A055 /* KKUserHeaderView.m */,
+				1755FC97238A69360060A055 /* KKUserHeaderView.xib */,
+				1755FC9D238A7A6D0060A055 /* KKFriendListSectionHeaderView.h */,
+				1755FC9E238A7A6D0060A055 /* KKFriendListSectionHeaderView.m */,
+				1755FCA0238A7ACC0060A055 /* KKFriendListSectionHeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1755FC4F238991950060A055 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1755FC6B238A271E0060A055 /* KKTabBarController.h */,
+				1755FC6C238A271E0060A055 /* KKTabBarController.m */,
+				1755FC91238A63180060A055 /* KKNavigationController.h */,
+				1755FC92238A63180060A055 /* KKNavigationController.m */,
+				1755FCBA238BEC610060A055 /* EnvironmentViewController.h */,
+				1755FCBB238BEC610060A055 /* EnvironmentViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1755FC56238991C00060A055 /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				1755FC58238991C00060A055 /* UIButton+KK.h */,
+				1755FC57238991C00060A055 /* UIButton+KK.m */,
+				1755FC8E238A56450060A055 /* GradientButton.h */,
+				1755FC8F238A56450060A055 /* GradientButton.m */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
+		1755FC6423899BAA0060A055 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1755FC6523899BC10060A055 /* UIKit */,
+				1743C26623895840000167C0 /* Category */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1755FC6523899BC10060A055 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1755FC6623899BCF0060A055 /* TableViewDataSource.h */,
+				1755FC6723899BCF0060A055 /* TableViewDataSource.m */,
+				1755FCA5238A9C420060A055 /* SectionedTableViewDataSource.h */,
+				1755FCA6238A9C420060A055 /* SectionedTableViewDataSource.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		1755FC7D238A38DC0060A055 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1755FC7E238A38FC0060A055 /* UIViewController+KK.h */,
+				1755FC7F238A38FC0060A055 /* UIViewController+KK.m */,
+				1743C20023882472000167C0 /* LaunchScreen.storyboard */,
+				1743C1FB23882470000167C0 /* Main.storyboard */,
+				1755FC69238A1D3D0060A055 /* Friend.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1755FC99238A6EDC0060A055 /* View+configure */ = {
+			isa = PBXGroup;
+			children = (
+				1755FC9A238A72B00060A055 /* KKUserHeaderView+Configure.h */,
+				1755FC9B238A72B00060A055 /* KKUserHeaderView+Configure.m */,
+				1755FCA2238A81760060A055 /* KKFriendTableViewCell+Configure.h */,
+				1755FCA3238A81760060A055 /* KKFriendTableViewCell+Configure.m */,
+				1755FCB7238ADA0F0060A055 /* KKFriendInvitingCell+Configure.h */,
+				1755FCB8238ADA0F0060A055 /* KKFriendInvitingCell+Configure.m */,
+			);
+			path = "View+configure";
+			sourceTree = "<group>";
+		};
+		1755FCAE238AB9CD0060A055 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1755FCAF238AB9E10060A055 /* KKFriendListViewModel.h */,
+				1755FCB0238AB9E10060A055 /* KKFriendListViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1743C1EE23882470000167C0 /* KOKO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1743C21323882472000167C0 /* Build configuration list for PBXNativeTarget "KOKO" */;
+			buildPhases = (
+				1743C1EB23882470000167C0 /* Sources */,
+				1743C1EC23882470000167C0 /* Frameworks */,
+				1743C1ED23882470000167C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KOKO;
+			productName = KOKO;
+			productReference = 1743C1EF23882470000167C0 /* KOKO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1743C20923882472000167C0 /* KOKOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1743C21623882472000167C0 /* Build configuration list for PBXNativeTarget "KOKOTests" */;
+			buildPhases = (
+				1743C20623882472000167C0 /* Sources */,
+				1743C20723882472000167C0 /* Frameworks */,
+				1743C20823882472000167C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1743C20C23882472000167C0 /* PBXTargetDependency */,
+			);
+			name = KOKOTests;
+			productName = KOKOTests;
+			productReference = 1743C20A23882472000167C0 /* KOKOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1743C1E723882470000167C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Hsieh Min Che";
+				TargetAttributes = {
+					1743C1EE23882470000167C0 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					1743C20923882472000167C0 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 1743C1EE23882470000167C0;
+					};
+				};
+			};
+			buildConfigurationList = 1743C1EA23882470000167C0 /* Build configuration list for PBXProject "KOKO" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1743C1E623882470000167C0;
+			productRefGroup = 1743C1F023882470000167C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1743C1EE23882470000167C0 /* KOKO */,
+				1743C20923882472000167C0 /* KOKOTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1743C1ED23882470000167C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1743C20223882472000167C0 /* LaunchScreen.storyboard in Resources */,
+				1743C1FF23882472000167C0 /* Assets.xcassets in Resources */,
+				1755FC98238A69360060A055 /* KKUserHeaderView.xib in Resources */,
+				1755FC6A238A1D3D0060A055 /* Friend.storyboard in Resources */,
+				1755FCA1238A7ACC0060A055 /* KKFriendListSectionHeaderView.xib in Resources */,
+				1743C1FD23882470000167C0 /* Main.storyboard in Resources */,
+				1755FC4E2389917F0060A055 /* KKFriendTableViewCell.xib in Resources */,
+				1755FCB6238AD4640060A055 /* KKFriendInvitingCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1743C20823882472000167C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1743C25023893313000167C0 /* man.json in Resources */,
+				1743C24F23893313000167C0 /* friend4.json in Resources */,
+				1743C25123893313000167C0 /* friend2.json in Resources */,
+				1743C25223893313000167C0 /* friend3.json in Resources */,
+				1743C25C23894CE0000167C0 /* friend1+2.json in Resources */,
+				1743C25323893313000167C0 /* friend1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1743C1EB23882470000167C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1743C2352388F92D000167C0 /* KKUser.m in Sources */,
+				1743C1F423882470000167C0 /* AppDelegate.m in Sources */,
+				1755FC5C238991D30060A055 /* UIImage+utils.m in Sources */,
+				1755FC59238991C00060A055 /* UIButton+KK.m in Sources */,
+				1755FCB9238ADA0F0060A055 /* KKFriendInvitingCell+Configure.m in Sources */,
+				1755FC6D238A271E0060A055 /* KKTabBarController.m in Sources */,
+				1755FC93238A63180060A055 /* KKNavigationController.m in Sources */,
+				1755FCB1238AB9E10060A055 /* KKFriendListViewModel.m in Sources */,
+				1755FCBC238BEC610060A055 /* EnvironmentViewController.m in Sources */,
+				1755FC54238991BA0060A055 /* UIImage+KK.m in Sources */,
+				1755FCAD238AAC9C0060A055 /* Environment.m in Sources */,
+				1755FCAA238AA00C0060A055 /* KKFriendListContainerController.m in Sources */,
+				1755FC6823899BCF0060A055 /* TableViewDataSource.m in Sources */,
+				1755FC79238A36A40060A055 /* UIViewController+utils.m in Sources */,
+				1743C2312388F243000167C0 /* KKAPIRequest.m in Sources */,
+				1755FC73238A302D0060A055 /* KKFriendEmptyViewController.m in Sources */,
+				1755FC55238991BA0060A055 /* UIFont+KK.m in Sources */,
+				1755FC80238A38FC0060A055 /* UIViewController+KK.m in Sources */,
+				1755FCB5238AD4640060A055 /* KKFriendInvitingCell.m in Sources */,
+				1755FC8D238A49670060A055 /* NSMutableAttributedString+utils.m in Sources */,
+				1755FC90238A56450060A055 /* GradientButton.m in Sources */,
+				1743C20523882472000167C0 /* main.m in Sources */,
+				1755FCA4238A81760060A055 /* KKFriendTableViewCell+Configure.m in Sources */,
+				1755FC7C238A378A0060A055 /* KKFriendListViewController.m in Sources */,
+				1743C23B2388FFC5000167C0 /* KKAPIClient.m in Sources */,
+				1755FC4D2389917F0060A055 /* KKFriendTableViewCell.m in Sources */,
+				1755FC96238A690E0060A055 /* KKUserHeaderView.m in Sources */,
+				1743C26323894DA5000167C0 /* NSDateFormatter+utils.m in Sources */,
+				1755FCA7238A9C420060A055 /* SectionedTableViewDataSource.m in Sources */,
+				1743C2382388FE0F000167C0 /* KKFriend.m in Sources */,
+				1743C1F723882470000167C0 /* SceneDelegate.m in Sources */,
+				1743C26B238976DE000167C0 /* UIColor+KK.m in Sources */,
+				1755FC70238A2FEF0060A055 /* KKFriendViewController.m in Sources */,
+				1755FC9C238A72B00060A055 /* KKUserHeaderView+Configure.m in Sources */,
+				1743C23E23890385000167C0 /* KKAPIRequest+KKAPI.m in Sources */,
+				1743C2272388DED6000167C0 /* NSURLSession+JSON.m in Sources */,
+				1755FC9F238A7A6D0060A055 /* KKFriendListSectionHeaderView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1743C20623882472000167C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1743C248238932A3000167C0 /* APITest.m in Sources */,
+				1743C257238937B1000167C0 /* KKStubURLProtocol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1743C20C23882472000167C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1743C1EE23882470000167C0 /* KOKO */;
+			targetProxy = 1743C20B23882472000167C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1743C1FB23882470000167C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1743C1FC23882470000167C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1743C20023882472000167C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1743C20123882472000167C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1743C21123882472000167C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1743C21223882472000167C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1743C21423882472000167C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CLR8T229GF;
+				INFOPLIST_FILE = KOKO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsieh.mr.KOKO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1743C21523882472000167C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CLR8T229GF;
+				INFOPLIST_FILE = KOKO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsieh.mr.KOKO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1743C21723882472000167C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CLR8T229GF;
+				INFOPLIST_FILE = KOKOTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsieh.mr.KOKOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KOKO.app/KOKO";
+			};
+			name = Debug;
+		};
+		1743C21823882472000167C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CLR8T229GF;
+				INFOPLIST_FILE = KOKOTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsieh.mr.KOKOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KOKO.app/KOKO";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1743C1EA23882470000167C0 /* Build configuration list for PBXProject "KOKO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1743C21123882472000167C0 /* Debug */,
+				1743C21223882472000167C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1743C21323882472000167C0 /* Build configuration list for PBXNativeTarget "KOKO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1743C21423882472000167C0 /* Debug */,
+				1743C21523882472000167C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1743C21623882472000167C0 /* Build configuration list for PBXNativeTarget "KOKOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1743C21723882472000167C0 /* Debug */,
+				1743C21823882472000167C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1743C1E723882470000167C0 /* Project object */;
+}

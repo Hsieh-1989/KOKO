@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KKFriendListSectionHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3u-Kv-SMb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLy-jA-wCz">
+                    <rect key="frame" x="20" y="45" width="374" height="36"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="mtK-7T-iA1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好友列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POw-mc-KlZ">
+                    <rect key="frame" x="20" y="12" width="69.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RB-xb-kIc">
+                    <rect key="frame" x="332" y="14.5" width="62" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="fiy-q6-Pdg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                    <state key="normal" title="加好友" image="icAddPink">
+                        <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="LLy-jA-wCz" firstAttribute="left" secondItem="iN0-l3-epB" secondAttribute="leftMargin" id="41E-wb-rpj"/>
+                <constraint firstItem="V3u-Kv-SMb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6h5-2T-LGB"/>
+                <constraint firstAttribute="trailing" secondItem="V3u-Kv-SMb" secondAttribute="trailing" id="Bcu-hD-Qbe"/>
+                <constraint firstAttribute="rightMargin" secondItem="LLy-jA-wCz" secondAttribute="right" id="JeM-7v-QHn"/>
+                <constraint firstItem="POw-mc-KlZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="K14-fZ-YdM"/>
+                <constraint firstItem="5RB-xb-kIc" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="R6f-Tc-tiJ"/>
+                <constraint firstItem="Rqv-nP-UwW" firstAttribute="bottom" secondItem="LLy-jA-wCz" secondAttribute="bottom" constant="12" id="aXK-xF-XsT"/>
+                <constraint firstItem="LLy-jA-wCz" firstAttribute="top" secondItem="POw-mc-KlZ" secondAttribute="bottom" priority="999" constant="12.5" id="bhv-rY-fr8"/>
+                <constraint firstItem="POw-mc-KlZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="e2j-Tx-BGR"/>
+                <constraint firstItem="V3u-Kv-SMb" firstAttribute="leading" secondItem="Rqv-nP-UwW" secondAttribute="leading" id="orW-Ht-hTV"/>
+                <constraint firstAttribute="bottom" secondItem="V3u-Kv-SMb" secondAttribute="bottom" id="owd-ZM-OYG"/>
+                <constraint firstItem="5RB-xb-kIc" firstAttribute="centerY" secondItem="POw-mc-KlZ" secondAttribute="centerY" id="ziV-Gu-fmk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Rqv-nP-UwW"/>
+            <connections>
+                <outlet property="addFriendButton" destination="5RB-xb-kIc" id="9j9-PH-KNN"/>
+                <outlet property="friendListLabel" destination="POw-mc-KlZ" id="5MP-Vq-lnF"/>
+                <outlet property="searchTextField" destination="LLy-jA-wCz" id="2Lo-LU-4u6"/>
+            </connections>
+            <point key="canvasLocation" x="227.536231884058" y="41.852678571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icAddPink" width="12" height="12"/>
+    </resources>
+</document>
