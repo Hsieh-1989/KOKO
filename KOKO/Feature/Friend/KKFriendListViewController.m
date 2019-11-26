@@ -15,6 +15,7 @@
 #import "KKFriend.h"
 #import "KKFriendListViewModel.h"
 #import "UIColor+KK.h"
+#import "NSNotification+utils.h"
 
 #pragma mark - type def
 
@@ -27,6 +28,11 @@ typedef NS_ENUM(NSUInteger, KKFriendListSection) {
 typedef TableViewDataSource<KKFriendTableViewCell *, KKFriend *> FriendDataSource;
 typedef TableViewDataSource<KKFriendInvitingCell *, KKFriend *> InvitingdDataSource;
 typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
+
+#pragma mark - constant
+
+CGFloat const kkFriendListTableViewTopMargin = 24;
+CGFloat const kkFriendListTableViewBottomMargin = 15;
 
 #pragma mark - private property
 
@@ -44,6 +50,9 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 @property (nonatomic, strong) InvitingdDataSource *invitingDataSource;
 @property (nonatomic, strong) SectionedTableViewDataSource *datasource;
 
+// dispoable
+@property (nonatomic, strong) NSMutableArray *keyboardObservers;
+
 @end
 
 @implementation KKFriendListViewController
@@ -51,6 +60,16 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self addObserver];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self removeObserver];
 }
 
 - (void)setupUI {
@@ -65,12 +84,38 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.contentInset = UIEdgeInsetsMake(24, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(kkFriendListTableViewTopMargin, 0, 0, 0);
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self.datasource;
     self.view.preservesSuperviewLayoutMargins = YES;
     self.tableView.preservesSuperviewLayoutMargins = YES;
+}
+
+- (void)addObserver {
+    id keyboardShowObserver = [NSNotificationCenter.defaultCenter addObserverForName:UIKeyboardWillShowNotification
+                                                                              object:nil
+                                                                               queue:nil
+                                                                          usingBlock:^(NSNotification * _Nonnull note) {
+        CGRect rect = [self.view convertRect:self.view.bounds toView:nil];
+        CGFloat bottomOffset = CGRectGetMaxY(rect) - [note getKeyboardInfo].frameEnd.origin.y + kkFriendListTableViewBottomMargin;
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(kkFriendListTableViewTopMargin, 0, bottomOffset, 0);
+    }];
+    id keyboardHideObserver = [NSNotificationCenter.defaultCenter addObserverForName:UIKeyboardWillHideNotification
+                                                                              object:nil
+                                                                               queue:nil
+                                                                          usingBlock:^(NSNotification * _Nonnull note) {
+        self.tableView.contentInset = UIEdgeInsetsMake(kkFriendListTableViewTopMargin, 0, 0, 0);
+    }];
+    [self.keyboardObservers addObjectsFromArray:@[keyboardShowObserver, keyboardHideObserver]];
+}
+
+- (void)removeObserver {
+    for (id observer in self.keyboardObservers) {
+        [NSNotificationCenter.defaultCenter removeObserver:observer];
+    }
+    [self.keyboardObservers removeAllObjects];
 }
 
 - (void)reloadData {
@@ -169,7 +214,7 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 15;
+    return kkFriendListTableViewBottomMargin;
 }
 
 #pragma mark - UITextFieldDelegate
