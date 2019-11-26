@@ -44,7 +44,7 @@
         if (friendList.count == 0) {
             [self updateContentViewController:[KKFriendEmptyViewController initFromStoryboard]];
         } else {
-            self.listViewController.friendList = friendList;
+            [self.listViewController resetFriendList:friendList];
             [self updateContentViewController:self.listViewController];
         }
 

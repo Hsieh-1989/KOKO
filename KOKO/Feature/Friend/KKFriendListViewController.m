@@ -80,9 +80,8 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 }
 
 #pragma mark - setter
-- (void)setFriendList:(NSArray<KKFriend *> *)friendList {
+- (void)resetFriendList:(NSArray<KKFriend *> *)friendList {
     [self.refreshControl endRefreshing];
-    _friendList = friendList;
     [self.viewModel reloadFriendList:friendList];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:KKFriendListSectionSearch] withRowAnimation:UITableViewRowAnimationAutomatic];
 }

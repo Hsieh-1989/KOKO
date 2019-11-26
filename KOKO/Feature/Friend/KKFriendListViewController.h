@@ -17,8 +17,9 @@ typedef void(^ReloadFrientList)(void);
 
 @interface KKFriendListViewController : UIViewController<StoryboardLoadable>
 
-@property (nonatomic, strong) NSArray<KKFriend *> *friendList;
 @property (nonatomic, strong) ReloadFrientList reloadFrientList;
+
+- (void)resetFriendList:(NSArray<KKFriend *> *)friendList;
 
 @end
 
