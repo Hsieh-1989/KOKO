@@ -39,15 +39,21 @@
     self.subTextLabel.text = @"邀請你成為好友：）";
     // shadow
     self.contentView.layer.masksToBounds = NO;
-    self.containerView.layer.masksToBounds = NO;
-    self.containerView.backgroundColor = UIColor.whiteColor;
-    self.containerView.layer.cornerRadius = 6;
-    self.containerView.layer.shadowColor = UIColor.blackColor.CGColor;
-    self.containerView.layer.shadowOffset = CGSizeMake(0, 2);
-    self.containerView.layer.shadowRadius = 8;
-    self.containerView.layer.shadowOpacity = 0.1;
-    self.containerView.layer.shouldRasterize = YES;
-    self.containerView.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    [self setShadow:self.containerView];
+    [self setShadow:self.collapseView];
+    [self.collapseView setHidden:YES];
+}
+
+- (void)setShadow:(UIView *)view {
+    view.layer.masksToBounds = NO;
+    view.backgroundColor = UIColor.whiteColor;
+    view.layer.cornerRadius = 6;
+    view.layer.shadowColor = UIColor.blackColor.CGColor;
+    view.layer.shadowOffset = CGSizeMake(0, 2);
+    view.layer.shadowRadius = 8;
+    view.layer.shadowOpacity = 0.1;
+    view.layer.shouldRasterize = YES;
+    view.layer.rasterizationScale = [UIScreen mainScreen].scale;
 }
 
 - (IBAction)acceptButtonDidTap:(id)sender {

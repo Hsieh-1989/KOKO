@@ -32,7 +32,7 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 #pragma mark - constant
 
 CGFloat const kkFriendListTableViewTopMargin = 24;
-CGFloat const kkFriendListTableViewBottomMargin = 15;
+CGFloat const kkFriendListTableViewBottomMargin = 24;
 
 #pragma mark - private property
 
@@ -127,7 +127,9 @@ CGFloat const kkFriendListTableViewBottomMargin = 15;
 #pragma mark - setter
 - (void)resetFriendList:(NSArray<KKFriend *> *)friendList {
     [self.refreshControl endRefreshing];
+    [UIView setAnimationsEnabled:NO];
     [self.viewModel reloadFriendList:friendList];
+    [UIView setAnimationsEnabled:YES];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:KKFriendListSectionSearch] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
@@ -137,10 +139,14 @@ CGFloat const kkFriendListTableViewBottomMargin = 15;
         __weak typeof(self) weakSelf = self;
         _viewModel = [[KKFriendListViewModel alloc] initWithValidFriendListUpdate:^{
             [weakSelf.friendDataSource resetItems:self.viewModel.validFriendList];
+            [weakSelf.tableView beginUpdates];
             [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:KKFriendListSectionList] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [weakSelf.tableView endUpdates];
         } invitingFriendListUpdate:^{
             [weakSelf.invitingDataSource resetItems:self.viewModel.invitingFriendList];
+            [weakSelf.tableView beginUpdates];
             [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:KKFriendListSectionInviting] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [weakSelf.tableView endUpdates];
         }];
     }
     return _viewModel;
@@ -173,10 +179,11 @@ CGFloat const kkFriendListTableViewBottomMargin = 15;
 
 - (InvitingdDataSource *)invitingDataSource {
     if (_invitingDataSource == nil) {
+        __weak typeof(self) weakSelf = self;
         _invitingDataSource = [[InvitingdDataSource alloc] initWithItems:self.viewModel.invitingFriendList
                                                               identifier:KKFriendInvitingCell.cellIdentifier
                                                                configure:^(KKFriendInvitingCell * _Nonnull cell, KKFriend * _Nonnull friend) {
-            [cell configureWithFriend:friend];
+            [cell configureWithFriend:friend isExpanded:weakSelf.viewModel.isInvitingSectionExpand];
         }];
     }
     return _invitingDataSource;
@@ -184,6 +191,14 @@ CGFloat const kkFriendListTableViewBottomMargin = 15;
 
 
 #pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == KKFriendListSectionInviting && indexPath.row == 0) {
+        [self.viewModel toggleInvitingListExpandingState];
+    }
+}
+
+// Header
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return UITableViewAutomaticDimension;
 }
@@ -207,6 +222,7 @@ CGFloat const kkFriendListTableViewBottomMargin = 15;
     }
 }
 
+// Footer
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *footer = [[UIView alloc] initWithFrame:CGRectZero];
     footer.backgroundColor = UIColor.clearColor;

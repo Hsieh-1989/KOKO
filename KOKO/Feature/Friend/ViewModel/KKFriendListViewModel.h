@@ -22,6 +22,7 @@ typedef void(^FriendListUpdate)(void);
 @property (nonatomic, assign) BOOL isInvitingSectionHidden;
 @property (nonatomic, assign) BOOL isInvitingSectionExpand;
 @property (nonatomic, strong) NSString *listInfoText;
+
 @property (nonatomic, strong) FriendListUpdate validFriendListUpdate;
 @property (nonatomic, strong) FriendListUpdate invitingFriendListUpdate;
 
@@ -33,7 +34,7 @@ typedef void(^FriendListUpdate)(void);
 - (void)searchDidStart;
 - (void)searchByText:(NSString *)text;
 - (void)searchDidEnd;
-- (void)setInvitingListHidden:(BOOL)hidden;
+- (void)toggleInvitingListExpandingState;
 
 @end
 
