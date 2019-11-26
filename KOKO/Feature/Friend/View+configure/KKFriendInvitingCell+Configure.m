@@ -11,8 +11,9 @@
 
 @implementation KKFriendInvitingCell (Configure)
 
-- (void)configureWithFriend:(KKFriend *)friend {
+- (void)configureWithFriend:(KKFriend *)friend isExpanded:(BOOL)isExpanded {
     self.nameLabel.text = friend.name;
+    [self.collapseView setHidden:isExpanded];
 }
 
 

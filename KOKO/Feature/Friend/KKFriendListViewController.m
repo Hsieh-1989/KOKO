@@ -15,6 +15,7 @@
 #import "KKFriend.h"
 #import "KKFriendListViewModel.h"
 #import "UIColor+KK.h"
+#import "NSNotification+utils.h"
 
 #pragma mark - type def
 
@@ -27,6 +28,11 @@ typedef NS_ENUM(NSUInteger, KKFriendListSection) {
 typedef TableViewDataSource<KKFriendTableViewCell *, KKFriend *> FriendDataSource;
 typedef TableViewDataSource<KKFriendInvitingCell *, KKFriend *> InvitingdDataSource;
 typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
+
+#pragma mark - constant
+
+CGFloat const kkFriendListTableViewTopMargin = 24;
+CGFloat const kkFriendListTableViewBottomMargin = 24;
 
 #pragma mark - private property
 
@@ -44,6 +50,9 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 @property (nonatomic, strong) InvitingdDataSource *invitingDataSource;
 @property (nonatomic, strong) SectionedTableViewDataSource *datasource;
 
+// dispoable
+@property (nonatomic, strong) NSMutableArray *keyboardObservers;
+
 @end
 
 @implementation KKFriendListViewController
@@ -51,6 +60,16 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self addObserver];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self removeObserver];
 }
 
 - (void)setupUI {
@@ -65,12 +84,38 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.contentInset = UIEdgeInsetsMake(24, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(kkFriendListTableViewTopMargin, 0, 0, 0);
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self.datasource;
     self.view.preservesSuperviewLayoutMargins = YES;
     self.tableView.preservesSuperviewLayoutMargins = YES;
+}
+
+- (void)addObserver {
+    id keyboardShowObserver = [NSNotificationCenter.defaultCenter addObserverForName:UIKeyboardWillShowNotification
+                                                                              object:nil
+                                                                               queue:nil
+                                                                          usingBlock:^(NSNotification * _Nonnull note) {
+        CGRect rect = [self.view convertRect:self.view.bounds toView:nil];
+        CGFloat bottomOffset = CGRectGetMaxY(rect) - [note getKeyboardInfo].frameEnd.origin.y + kkFriendListTableViewBottomMargin;
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(kkFriendListTableViewTopMargin, 0, bottomOffset, 0);
+    }];
+    id keyboardHideObserver = [NSNotificationCenter.defaultCenter addObserverForName:UIKeyboardWillHideNotification
+                                                                              object:nil
+                                                                               queue:nil
+                                                                          usingBlock:^(NSNotification * _Nonnull note) {
+        self.tableView.contentInset = UIEdgeInsetsMake(kkFriendListTableViewTopMargin, 0, 0, 0);
+    }];
+    [self.keyboardObservers addObjectsFromArray:@[keyboardShowObserver, keyboardHideObserver]];
+}
+
+- (void)removeObserver {
+    for (id observer in self.keyboardObservers) {
+        [NSNotificationCenter.defaultCenter removeObserver:observer];
+    }
+    [self.keyboardObservers removeAllObjects];
 }
 
 - (void)reloadData {
@@ -80,10 +125,11 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 }
 
 #pragma mark - setter
-- (void)setFriendList:(NSArray<KKFriend *> *)friendList {
+- (void)resetFriendList:(NSArray<KKFriend *> *)friendList {
     [self.refreshControl endRefreshing];
-    _friendList = friendList;
+    [UIView setAnimationsEnabled:NO];
     [self.viewModel reloadFriendList:friendList];
+    [UIView setAnimationsEnabled:YES];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:KKFriendListSectionSearch] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
@@ -93,10 +139,14 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
         __weak typeof(self) weakSelf = self;
         _viewModel = [[KKFriendListViewModel alloc] initWithValidFriendListUpdate:^{
             [weakSelf.friendDataSource resetItems:self.viewModel.validFriendList];
+            [weakSelf.tableView beginUpdates];
             [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:KKFriendListSectionList] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [weakSelf.tableView endUpdates];
         } invitingFriendListUpdate:^{
             [weakSelf.invitingDataSource resetItems:self.viewModel.invitingFriendList];
+            [weakSelf.tableView beginUpdates];
             [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:KKFriendListSectionInviting] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [weakSelf.tableView endUpdates];
         }];
     }
     return _viewModel;
@@ -129,10 +179,11 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 
 - (InvitingdDataSource *)invitingDataSource {
     if (_invitingDataSource == nil) {
+        __weak typeof(self) weakSelf = self;
         _invitingDataSource = [[InvitingdDataSource alloc] initWithItems:self.viewModel.invitingFriendList
                                                               identifier:KKFriendInvitingCell.cellIdentifier
                                                                configure:^(KKFriendInvitingCell * _Nonnull cell, KKFriend * _Nonnull friend) {
-            [cell configureWithFriend:friend];
+            [cell configureWithFriend:friend isExpanded:weakSelf.viewModel.isInvitingSectionExpand];
         }];
     }
     return _invitingDataSource;
@@ -140,6 +191,14 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 
 
 #pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == KKFriendListSectionInviting && indexPath.row == 0) {
+        [self.viewModel toggleInvitingListExpandingState];
+    }
+}
+
+// Header
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return UITableViewAutomaticDimension;
 }
@@ -163,6 +222,7 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
     }
 }
 
+// Footer
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *footer = [[UIView alloc] initWithFrame:CGRectZero];
     footer.backgroundColor = UIColor.clearColor;
@@ -170,7 +230,7 @@ typedef TableViewDataSource<UITableViewCell *, NSNull *> EmptyDataSource;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 15;
+    return kkFriendListTableViewBottomMargin;
 }
 
 #pragma mark - UITextFieldDelegate

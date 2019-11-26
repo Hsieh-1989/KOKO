@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KKFriendInvitingCell (Configure)
 
-- (void)configureWithFriend:(KKFriend *)friend;
+- (void)configureWithFriend:(KKFriend *)friend isExpanded:(BOOL)isExpanded;
 
 @end
 

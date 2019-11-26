@@ -67,8 +67,12 @@
     self.isInvitingSectionHidden = NO;
 }
 
-- (void)setInvitingListHidden:(BOOL)hidden {
-    
+- (void)toggleInvitingListExpandingState {
+    if (self.isInvitingSectionHidden) {
+        return;
+    }
+    self.isInvitingSectionExpand = !self.isInvitingSectionExpand;
+    [self updateInvitingFriendList];
 }
 
 #pragma mark - setter
@@ -119,12 +123,20 @@
 }
 
 - (void)updateInvitingFriendList {
-    if (_isInvitingSectionHidden) {
+    if (self.isInvitingSectionHidden) {
+        // hidden state
         self.invitingFriendList = @[];
-    } else if (_isInvitingSectionExpand) {
-        self.invitingFriendList = _originalInvitingFriendList;
+    } else if (self.isInvitingSectionExpand) {
+        // expand state
+        self.invitingFriendList = self.originalInvitingFriendList;
     } else {
-        self.invitingFriendList = _originalInvitingFriendList;
+        // collapse state
+        if (self.originalInvitingFriendList.count > 1) {
+            self.invitingFriendList = @[self.originalInvitingFriendList[0]];
+        } else {
+            self.isInvitingSectionExpand = NO;
+            self.invitingFriendList = self.originalInvitingFriendList;
+        }
     }
 }
 

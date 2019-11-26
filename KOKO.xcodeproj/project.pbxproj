@@ -60,6 +60,7 @@
 		1755FCB6238AD4640060A055 /* KKFriendInvitingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1755FCB4238AD4640060A055 /* KKFriendInvitingCell.xib */; };
 		1755FCB9238ADA0F0060A055 /* KKFriendInvitingCell+Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCB8238ADA0F0060A055 /* KKFriendInvitingCell+Configure.m */; };
 		1755FCBC238BEC610060A055 /* EnvironmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCBB238BEC610060A055 /* EnvironmentViewController.m */; };
+		1755FCC9238D60D60060A055 /* NSNotification+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755FCC8238D60D60060A055 /* NSNotification+utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,8 @@
 		1755FCB8238ADA0F0060A055 /* KKFriendInvitingCell+Configure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "KKFriendInvitingCell+Configure.m"; sourceTree = "<group>"; };
 		1755FCBA238BEC610060A055 /* EnvironmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnvironmentViewController.h; sourceTree = "<group>"; };
 		1755FCBB238BEC610060A055 /* EnvironmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnvironmentViewController.m; sourceTree = "<group>"; };
+		1755FCC7238D60D60060A055 /* NSNotification+utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotification+utils.h"; sourceTree = "<group>"; };
+		1755FCC8238D60D60060A055 /* NSNotification+utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNotification+utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +325,8 @@
 				1755FC78238A36A40060A055 /* UIViewController+utils.m */,
 				1755FC8B238A49660060A055 /* NSMutableAttributedString+utils.h */,
 				1755FC8C238A49660060A055 /* NSMutableAttributedString+utils.m */,
+				1755FCC7238D60D60060A055 /* NSNotification+utils.h */,
+				1755FCC8238D60D60060A055 /* NSNotification+utils.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 				1743C23B2388FFC5000167C0 /* KKAPIClient.m in Sources */,
 				1755FC4D2389917F0060A055 /* KKFriendTableViewCell.m in Sources */,
 				1755FC96238A690E0060A055 /* KKUserHeaderView.m in Sources */,
+				1755FCC9238D60D60060A055 /* NSNotification+utils.m in Sources */,
 				1743C26323894DA5000167C0 /* NSDateFormatter+utils.m in Sources */,
 				1755FCA7238A9C420060A055 /* SectionedTableViewDataSource.m in Sources */,
 				1743C2382388FE0F000167C0 /* KKFriend.m in Sources */,
